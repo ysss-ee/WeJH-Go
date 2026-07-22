@@ -64,6 +64,8 @@ func FetchHandleOfPost(form url.Values, host string, url funnelApi.FunnelApi) (i
 		return nil, apiException.NoThatPasswordOrWrong
 	case 416:
 		return nil, apiException.OAuthNotUpdate
+	case 417:
+		return nil, apiException.NoApiAvailable
 	default:
 		return nil, apiException.ServerError
 	}
